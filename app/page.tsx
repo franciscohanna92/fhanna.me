@@ -24,7 +24,7 @@ const work = [
     title: "Technical Lead",
     subtitle: "Listo · Full Time",
     date: "Mar 2021 - Present",
-    description: `As the Tech Lead at Listo, a communication platform for frontline workers, I've designed and implemented the MVP, led major refactors for scalability, migrated to Wear OS 3, and tackled technical challenges for reliable push notifications. I lead a team of five developers in developing features from inception to delivery.`,
+    description: `As the Tech Lead at Listo, a communication platform for frontline workers, I've designed and implemented the MVP, led major refactors for scalability, migrated an smartwatch app to Wear OS 3, and tackled technical challenges for reliable push notifications. I lead a team of five developers in developing features from inception to delivery.`,
   },
   {
     title: "Sr. Software Engineer",
@@ -133,12 +133,12 @@ export default function Home() {
 
         {/* Work experience */}
 
-        <section className="prose">
+        <section>
           <h2 className="font-bold tracking-tight  mt-8 mb-6">Work Experience</h2>
 
           <ul role="list" className="list-none p-0 space-y-8 -ml-1">
             {work.map((item, index) => (
-              <li key={item.title} className="relative flex gap-x-4 p-0 m-0 prose">
+              <li key={index} className="relative flex gap-x-4 p-0 m-0">
                 {/* line */}
                 {index === work.length - 1 ? null : (
                   <div className="absolute left-0 top-2 flex w-6 justify-center -bottom-10">
@@ -150,7 +150,7 @@ export default function Home() {
                   <div className="h-1.5 w-1.5 rounded-full bg-stone-200 ring-1 ring-stone-300"></div>
                 </div>
                 {/* content */}
-                <div>
+                <div className="w-full">
                   <div className="space-y-1 mb-4 relative">
                     <h3 className="font-bold tracking-tight  mt-0 mb-0">{item.title}</h3>
                     <p className="">{item.subtitle}</p>
