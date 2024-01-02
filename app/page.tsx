@@ -67,84 +67,80 @@ const education = [
 
 export default function Home() {
   return (
-    <main>
-      <div className="mx-auto max-w-2xl lg:max-w-5xl text-stone-800">
-        <header className="flex sm:items-center flex-col gap-8 sm:flex-row-reverse">
-          <img
-            src="https://media.licdn.com/dms/image/D4D03AQEXG3cCmokA1g/profile-displayphoto-shrink_800_800/0/1690399429821?e=1709769600&v=beta&t=QyzgLXkn5aUVuTn25lBMp9Hf1xfsd5AQH5AUXde-Gfc"
-            alt="Francisco Hanna"
-            className="rounded-xl w-20 h-20 my-0"
-          />
-          <div className="mr-auto">
-            <h1 className="font-extrabold tracking-tighter mb-1">Francisco Hanna</h1>
-            <p className="text-stone-500 font-normal tracking-tight mt-0 lead mb-0">
-              Technical Lead at{" "}
-              <a href="https://www.getlisto.io/" target="_blank" rel="noopener noreferrer">
-                Listo
-              </a>
-            </p>
-          </div>
-        </header>
-
-        {/* About me */}
-        <section>
-          <h2 className="font-bold tracking-tight mt-8 mb-2">About me</h2>
-          <p>
-            I’m a product-focused software engineer with 7+ years of experience in the IT industry, skilled in various programming languages
-            and frameworks. I have successfully developed applications and contributed to projects for different companies. As a team
-            player, I enjoy sharing my knowledge and expertise, helping to mentor and support fellow developers. <br />
+    <main className="mx-auto max-w-2xl lg:max-w-5xl text-stone-800">
+      <header className="flex sm:items-center flex-col gap-8 sm:flex-row-reverse">
+        <img
+          src="https://media.licdn.com/dms/image/D4D03AQEXG3cCmokA1g/profile-displayphoto-shrink_800_800/0/1690399429821?e=1709769600&v=beta&t=QyzgLXkn5aUVuTn25lBMp9Hf1xfsd5AQH5AUXde-Gfc"
+          alt="Francisco Hanna"
+          className="rounded-xl w-20 h-20 my-0"
+        />
+        <div className="mr-auto">
+          <h1 className="font-extrabold tracking-tighter mb-1">Francisco Hanna</h1>
+          <p className="text-stone-500 font-normal tracking-tight mt-0 lead mb-0">
+            Technical Lead at{" "}
+            <a href="https://www.getlisto.io/" target="_blank" rel="noopener noreferrer">
+              Listo
+            </a>
           </p>
-          <p>Tech & Tools: Typescript, React, NodeJS, Express, SQL, AWS.</p>
-        </section>
+        </div>
+      </header>
 
-        {/* Work experience */}
+      {/* About me */}
+      <section>
+        <h2 className="font-bold tracking-tight mt-8 mb-2">About me</h2>
+        <p>
+          I’m a product-focused software engineer with 7+ years of experience in the IT industry, skilled in various programming languages
+          and frameworks. I have successfully developed applications and contributed to projects for different companies. As a team player,
+          I enjoy sharing my knowledge and expertise, helping to mentor and support fellow developers. <br />
+        </p>
+        <p>Tech & Tools: Typescript, React, NodeJS, Express, SQL, AWS.</p>
+      </section>
 
-        <section>
-          <h2 className="font-bold tracking-tight  mt-8 mb-6">Work Experience</h2>
+      {/* Work experience */}
+      <section>
+        <h2 className="font-bold tracking-tight  mt-8 mb-6">Work Experience</h2>
 
-          <ul role="list" className="list-none p-0 space-y-8 -ml-1">
-            {work.map((item, index) => (
-              <li key={index} className="relative flex gap-x-4 p-0 m-0">
-                {/* line */}
-                {index === work.length - 1 ? null : (
-                  <div className="absolute left-0 top-2 flex w-6 justify-center -bottom-10">
-                    <div className="w-px bg-stone-200"></div>
-                  </div>
-                )}
-                {/* dot */}
-                <div className="relative flex h-6 w-6 flex-none items-center justify-center bg-transparent">
-                  <div className="h-1.5 w-1.5 rounded-full bg-stone-200 ring-1 ring-stone-300"></div>
+        <ul role="list" className="list-none p-0 space-y-8 -ml-1">
+          {work.map((item, index) => (
+            <li key={index} className="relative flex gap-x-4 p-0 m-0">
+              {/* line */}
+              {index === work.length - 1 ? null : (
+                <div className="absolute left-0 top-2 flex w-6 justify-center -bottom-10">
+                  <div className="w-px bg-stone-200"></div>
                 </div>
-                {/* content */}
-                <div className="w-full">
-                  <div className="space-y-1 mb-4 relative">
-                    <h3 className="font-bold tracking-tight  mt-0 mb-0">{item.title}</h3>
-                    <p>{item.subtitle}</p>
-                    <p className="sm:absolute top-0 right-0 flex-none py-0.5 ml-auto leading-5 text-stone-500">{item.date}</p>
-                  </div>
-                  <p className=" mt-2 mb-0">{item.description}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </section>
+              )}
+              {/* dot */}
+              <div className="relative flex h-6 w-6 flex-none items-center justify-center bg-transparent">
+                <div className="h-1.5 w-1.5 rounded-full bg-stone-200 ring-1 ring-stone-300"></div>
+              </div>
+              {/* content */}
+              <div>
+                <h3 className="font-bold tracking-tight  mt-0 mb-0">{item.title}</h3>
+                <p className="mb-1">{item.subtitle}</p>
+                <p className="sm:absolute top-0 right-0 m-0 text-stone-500">{item.date}</p>
+                <p className="mt-4 mb-0">{item.description}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
 
-        <section>
-          <h2 className="font-bold tracking-tight  mt-8 mb-6">Education</h2>
+      {/* Education */}
+      <section>
+        <h2 className="font-bold tracking-tight  mt-8 mb-6">Education</h2>
 
-          <ul className="list-none pl-0 space-y-8">
-            {education.map((item) => (
-              <li className="pl-0 group relative" key={item.title}>
-                <div className="space-y-1 mb-4">
-                  <h3 className="font-bold tracking-tight mt-0 mb-0">{item.title}</h3>
-                  <p>{item.subtitle}</p>
-                  <p className="text-stone-500">{item.date}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </section>
-      </div>
+        <ul className="list-none pl-0 space-y-8">
+          {education.map((item) => (
+            <li className="pl-0 group relative" key={item.title}>
+              <div className="space-y-1 mb-4">
+                <h3 className="font-bold tracking-tight mt-0 mb-0">{item.title}</h3>
+                <p>{item.subtitle}</p>
+                <p className="text-stone-500">{item.date}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
     </main>
   );
 }
