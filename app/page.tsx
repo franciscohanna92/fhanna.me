@@ -104,7 +104,8 @@ export default function Home() {
             </a>
           </p>
 
-          <div className="flex items-center gap-4">
+          {/* Social links */}
+          <div className="flex items-center gap-4 print:hidden">
             {social.map((item) => (
               <a
                 title={item.name}
