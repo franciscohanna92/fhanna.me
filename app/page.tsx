@@ -89,17 +89,17 @@ const education = [
 export default function Home() {
   return (
     <main>
-      <div className="mx-auto max-w-2xl lg:max-w-5xl">
+      <div className="mx-auto max-w-2xl lg:max-w-5xl prose text-stone-800">
         <div>
           <img
             src="https://media.licdn.com/dms/image/D4D03AQEXG3cCmokA1g/profile-displayphoto-shrink_800_800/0/1690399429821?e=1709769600&v=beta&t=QyzgLXkn5aUVuTn25lBMp9Hf1xfsd5AQH5AUXde-Gfc"
             alt="Francisco Hanna"
             className="rounded-full w-24 h-24 mb-8 mt-0"
           />
-          <h1 className="text-4xl font-extrabold tracking-tighter text-stone-800 mb-2">Francisco Hanna</h1>
-          <p className="text-xl text-stone-800 tracking-tight  mt-0">
+          <h1 className="font-extrabold tracking-tighter  mb-2">Francisco Hanna</h1>
+          <p className=" font-normal tracking-tight mt-0">
             Technical Lead at{" "}
-            <a href="https://www.getlisto.io/" target="_blank" rel="noopener noreferrer" className="text-stone-800">
+            <a href="https://www.getlisto.io/" target="_blank" rel="noopener noreferrer">
               Listo
             </a>
           </p>
@@ -114,31 +114,31 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="bg-stone-200 rounded-lg grid place-content-center p-4 h-8 w-8 opacity-100 hover:opacity-75 cursor-pointer transition"
               >
-                <item.icon className="text-stone-800" />
+                <item.icon className="" />
               </a>
             ))}
           </div>
         </div>
 
         {/* About me */}
-        <section>
-          <h2 className="text-xl uppercase font-bold tracking-tight text-stone-800 mt-8 mb-2">About me</h2>
-          <p className="text-base text-stone-800">
+        <section className="">
+          <h2 className="font-bold tracking-tight mt-8 mb-2">About me</h2>
+          <p>
             I’m a product-focused software engineer with 7+ years of experience in the IT industry, skilled in various programming languages
             and frameworks. I have successfully developed applications and contributed to projects for different companies. As a team
-            player, I enjoy sharing my knowledge and expertise, helping to mentor and support fellow developers.
+            player, I enjoy sharing my knowledge and expertise, helping to mentor and support fellow developers. <br />
           </p>
           <p>Tech & Tools: Typescript, React, NodeJS, Express, SQL, AWS.</p>
         </section>
 
         {/* Work experience */}
 
-        <section>
-          <h2 className="text-xl uppercase font-bold tracking-tight text-stone-800 mt-8 mb-6">Work experience</h2>
+        <section className="prose">
+          <h2 className="font-bold tracking-tight  mt-8 mb-6">Work Experience</h2>
 
           <ul role="list" className="list-none p-0 space-y-8 -ml-1">
             {work.map((item, index) => (
-              <li key={item.title} className="relative flex gap-x-4 p-0 m-0">
+              <li key={item.title} className="relative flex gap-x-4 p-0 m-0 prose">
                 {/* line */}
                 {index === work.length - 1 ? null : (
                   <div className="absolute left-0 top-2 flex w-6 justify-center -bottom-10">
@@ -152,13 +152,11 @@ export default function Home() {
                 {/* content */}
                 <div>
                   <div className="space-y-1 mb-4 relative">
-                    <h3 className="text-lg font-bold tracking-tight text-stone-800 mt-0 mb-0">{item.title}</h3>
-                    <p className="text-base text-stone-800">{item.subtitle}</p>
-                    <p className="sm:absolute top-0 right-0 text-base sm:text-sm flex-none py-0.5 ml-auto leading-5 text-gray-500">
-                      {item.date}
-                    </p>
+                    <h3 className="font-bold tracking-tight  mt-0 mb-0">{item.title}</h3>
+                    <p className="">{item.subtitle}</p>
+                    <p className="sm:absolute top-0 right-0 flex-none py-0.5 ml-auto leading-5 text-stone-500">{item.date}</p>
                   </div>
-                  <p className="text-base text-stone-800 mt-2 mb-0">{item.description}</p>
+                  <p className=" mt-2 mb-0">{item.description}</p>
                 </div>
               </li>
             ))}
@@ -166,15 +164,15 @@ export default function Home() {
         </section>
 
         <section>
-          <h2 className="text-xl uppercase font-bold tracking-tight text-stone-800 mt-8 mb-6">Education</h2>
+          <h2 className="font-bold tracking-tight  mt-8 mb-6">Education</h2>
 
           <ul className="list-none pl-0 space-y-8">
             {education.map((item) => (
               <li className="pl-0 group relative" key={item.title}>
                 <div className="space-y-1 mb-4">
-                  <h3 className="text-lg font-bold tracking-tight text-stone-800 mt-0 mb-0">{item.title}</h3>
-                  <p className="text-base text-stone-800">{item.subtitle}</p>
-                  <p className="text-base text-stone-800 opacity-50">{item.date}</p>
+                  <h3 className="font-bold tracking-tight mt-0 mb-0">{item.title}</h3>
+                  <p>{item.subtitle}</p>
+                  <p className="text-stone-500">{item.date}</p>
                 </div>
               </li>
             ))}

@@ -1,10 +1,10 @@
 import type {Metadata} from "next";
-import {DM_Sans} from "next/font/google";
+import {Chakra_Petch} from "next/font/google";
 import "./globals.css";
 
-const inter = DM_Sans({
+const inter = Chakra_Petch({
   subsets: ["latin-ext"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
