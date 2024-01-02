@@ -1,24 +1,3 @@
-import {GithubIcon, LucideLinkedin, TwitterIcon} from "lucide-react";
-import Image from "next/image";
-
-const social = [
-  {
-    name: "GitHub",
-    href: "https://github.com/franciscohanna92",
-    icon: GithubIcon,
-  },
-  {
-    name: "Twitter",
-    href: "https://twitter.com/fhanna92",
-    icon: TwitterIcon,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/fhanna92",
-    icon: LucideLinkedin,
-  },
-];
-
 const work = [
   {
     title: "Technical Lead",
@@ -90,39 +69,25 @@ export default function Home() {
   return (
     <main>
       <div className="mx-auto max-w-2xl lg:max-w-5xl text-stone-800">
-        <div>
+        <header className="flex sm:items-center flex-col gap-8 sm:flex-row-reverse">
           <img
             src="https://media.licdn.com/dms/image/D4D03AQEXG3cCmokA1g/profile-displayphoto-shrink_800_800/0/1690399429821?e=1709769600&v=beta&t=QyzgLXkn5aUVuTn25lBMp9Hf1xfsd5AQH5AUXde-Gfc"
             alt="Francisco Hanna"
-            className="rounded-full w-24 h-24 mb-8 mt-0"
+            className="rounded-xl w-20 h-20 my-0"
           />
-          <h1 className="font-extrabold tracking-tighter  mb-2">Francisco Hanna</h1>
-          <p className="text-stone-500 font-normal tracking-tight mt-0 lead">
-            Technical Lead at{" "}
-            <a href="https://www.getlisto.io/" target="_blank" rel="noopener noreferrer">
-              Listo
-            </a>
-          </p>
-
-          {/* Social links */}
-          <div className="flex items-center gap-4 print:hidden">
-            {social.map((item) => (
-              <a
-                title={item.name}
-                key={item.name}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-stone-200 rounded-lg grid place-content-center p-4 h-8 w-8 opacity-100 hover:opacity-75 cursor-pointer transition"
-              >
-                <item.icon className="" />
+          <div className="mr-auto">
+            <h1 className="font-extrabold tracking-tighter mb-1">Francisco Hanna</h1>
+            <p className="text-stone-500 font-normal tracking-tight mt-0 lead mb-0">
+              Technical Lead at{" "}
+              <a href="https://www.getlisto.io/" target="_blank" rel="noopener noreferrer">
+                Listo
               </a>
-            ))}
+            </p>
           </div>
-        </div>
+        </header>
 
         {/* About me */}
-        <section className="">
+        <section>
           <h2 className="font-bold tracking-tight mt-8 mb-2">About me</h2>
           <p>
             I’m a product-focused software engineer with 7+ years of experience in the IT industry, skilled in various programming languages
@@ -154,7 +119,7 @@ export default function Home() {
                 <div className="w-full">
                   <div className="space-y-1 mb-4 relative">
                     <h3 className="font-bold tracking-tight  mt-0 mb-0">{item.title}</h3>
-                    <p className="">{item.subtitle}</p>
+                    <p>{item.subtitle}</p>
                     <p className="sm:absolute top-0 right-0 flex-none py-0.5 ml-auto leading-5 text-stone-500">{item.date}</p>
                   </div>
                   <p className=" mt-2 mb-0">{item.description}</p>
