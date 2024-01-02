@@ -89,7 +89,7 @@ const education = [
 export default function Home() {
   return (
     <main>
-      <div className="mx-auto max-w-2xl lg:max-w-5xl prose text-stone-800">
+      <div className="mx-auto max-w-2xl lg:max-w-5xl text-stone-800">
         <div>
           <img
             src="https://media.licdn.com/dms/image/D4D03AQEXG3cCmokA1g/profile-displayphoto-shrink_800_800/0/1690399429821?e=1709769600&v=beta&t=QyzgLXkn5aUVuTn25lBMp9Hf1xfsd5AQH5AUXde-Gfc"
@@ -97,7 +97,7 @@ export default function Home() {
             className="rounded-full w-24 h-24 mb-8 mt-0"
           />
           <h1 className="font-extrabold tracking-tighter  mb-2">Francisco Hanna</h1>
-          <p className=" font-normal tracking-tight mt-0">
+          <p className="text-stone-500 font-normal tracking-tight mt-0 lead">
             Technical Lead at{" "}
             <a href="https://www.getlisto.io/" target="_blank" rel="noopener noreferrer">
               Listo
