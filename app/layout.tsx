@@ -1,5 +1,6 @@
 import type {Metadata} from "next";
 import {Chakra_Petch} from "next/font/google";
+import {Analytics} from "@vercel/analytics/react";
 
 import {GithubIcon, LucideLinkedin, TwitterIcon} from "lucide-react";
 
@@ -40,11 +41,6 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         className={`px-6 py-16 sm:px-16 print:p-8 bg-stone-50 border-x border-stone-200 max-w-4xl print:max-w-full mx-auto prose ${inter.className}`}
       >
         {children}
-        {/* <footer>
-          <p className="text-sm border-t border-stone-200 pt-8 text-stone-500 mt-10 mb-0">{new Date().getFullYear()}</p>
-        </footer> */}
-
-        {/* Social links */}
         <footer className="text-center space-y-8 print:hidden border-t pt-8 mt-8 text-stone-800">
           <div className="flex items-center gap-4 justify-center">
             {social.map((item) => (
@@ -62,6 +58,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           </div>
           <p className="text-sm">{new Date().getFullYear()}</p>
         </footer>
+        <Analytics />
       </body>
     </html>
   );
