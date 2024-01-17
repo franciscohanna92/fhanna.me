@@ -3,7 +3,7 @@ const work = [
     title: "Technical Lead",
     subtitle: "Listo · Full Time",
     date: "Mar 2021 - Present",
-    description: `As the Tech Lead at Listo, a communication platform for frontline workers, I've designed and implemented the MVP, led major refactors for scalability, migrated an smartwatch app to Wear OS 3, and tackled technical challenges for reliable push notifications. I lead a team of five developers in developing features from inception to delivery.`,
+    description: `As the Tech Lead at Listo, a communication platform for frontline workers, I've designed and implemented the MVP, led major refactors for scalability, migrated a smartwatch app to Wear OS 3, and tackled technical challenges for reliable push notifications. I lead a team of five developers in developing features from inception to delivery.`,
   },
   {
     title: "Sr. Software Engineer",
